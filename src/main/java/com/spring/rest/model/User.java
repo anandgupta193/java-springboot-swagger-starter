@@ -1,15 +1,9 @@
-package com.rest.model;
+package com.spring.rest.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import org.springframework.stereotype.Component;
 
-
-
-@Entity
-@Table(name="User")
+@Component
 public class User {
-	@Id
 	private String userName;
 	private String password;
 	

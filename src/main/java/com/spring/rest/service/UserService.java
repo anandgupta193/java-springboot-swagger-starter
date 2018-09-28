@@ -1,12 +1,13 @@
-package com.rest.service;
+package com.spring.rest.service;
 
 import java.util.ArrayList;
 import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
-import com.rest.exception.UserNotFoundException;
-import com.rest.model.User;
+
+import com.spring.rest.exception.UserNotFoundException;
+import com.spring.rest.model.User;
 
 @Service
 public class UserService{
@@ -16,9 +17,9 @@ public class UserService{
 	
 	
 	static {
-		userList.add(new User("Kritika","kritika"));
-		userList.add(new User("Anand","anand"));
-		userList.add(new User("Sankalp","sankalp"));
+		userList.add(new User("ABCD","abcd"));
+		userList.add(new User("EFGH","efgh"));
+		userList.add(new User("IJKL","ijkl"));
 	}
 	public List<User> getAllUsers() throws UserNotFoundException{
 		LOGGER.info("Inside Service::"+ CLASSNAME + " Method:: getAllUsers()" );

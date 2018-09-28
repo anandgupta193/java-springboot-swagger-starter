@@ -1,4 +1,4 @@
-package com.rest.exception;
+package com.spring.rest.exception;
 
 import java.util.Date;
 

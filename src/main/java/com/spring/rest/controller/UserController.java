@@ -1,6 +1,7 @@
-package com.rest.controller;
+package com.spring.rest.controller;
 
 import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,9 +12,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import com.rest.exception.UserNotFoundException;
-import com.rest.model.User;
-import com.rest.service.UserService;
+
+import com.spring.rest.exception.UserNotFoundException;
+import com.spring.rest.model.User;
+import com.spring.rest.service.UserService;
+
 
 @RestController
 public class UserController {
@@ -29,7 +32,7 @@ public class UserController {
 	}
 	
 	@RequestMapping(value="/User/{uname}", method = RequestMethod.GET)
-	public User getbook(@PathVariable String uname) throws UserNotFoundException {
+	public User getUser(@PathVariable String uname) throws UserNotFoundException {
 		LOGGER.info("Inside Controller::"+ CLASSNAME + " Method:: getUser()" );
 		User user = new User();
 		try {
@@ -40,9 +43,10 @@ public class UserController {
 		return user;		
 	}
 	@RequestMapping(value="/User", method = RequestMethod.POST)
-	public ResponseEntity <String> addBook(@RequestBody User b) {
+	public ResponseEntity <String> addUser(@RequestBody User b) {
 		try {userService.addUser(b);}catch(UserNotFoundException bex) {};
 		
 		return ResponseEntity.status(HttpStatus.CREATED).build();
 	}
+
 }
