@@ -48,7 +48,7 @@ public class UserController {
 		
 		return ResponseEntity.status(HttpStatus.CREATED).build();
 	}
-	@RequestMapping(value="/User{uname}", method = RequestMethod.DELETE)
+	@RequestMapping(value="/User/{uname}", method = RequestMethod.DELETE)
 	public ResponseEntity <String> deleteUser(@PathVariable String uname) {
 		try {userService.deleteUser(uname);}catch(UserNotFoundException bex) {};
 		
