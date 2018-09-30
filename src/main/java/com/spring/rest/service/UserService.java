@@ -43,5 +43,14 @@ public class UserService{
 	public void addUser(User b)  throws UserNotFoundException {
 		userList.add(b);
 	}
+	public void deleteUser(String uname) {
+		for(User user:userList) {
+			if(user.getUserName().equals(uname) ){
+				int index = userList.indexOf(uname);
+				System.out.println(index);
+				userList.remove(index);
+			}
+		}
+	}
 	
 }
