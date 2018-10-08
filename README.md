@@ -21,7 +21,7 @@ Simple Java Spring Boot App with Integrated Swagger.
 4. Right click on Project -> Maven -> Update Project
 5. After step 4, all depencencies will be available inside Maven Dependency folder
 6. Right click on project -> Run -> Spring boot app
-7. Embeddd tomcat will get started.
+7. Embedded tomcat will get started.
 8. Run http://localhost:8080/swagger-ui.html in the browser
 9. A list of available end points open up
 10. Use postman to hit APIs 
